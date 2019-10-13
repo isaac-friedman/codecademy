@@ -26,7 +26,14 @@ const getSleepHours = day => {
   }
 }
 
-const getActualSleepHours = () => getSleepHours('Sunday') + getSleepHours('Monday') + getSleepHours('Tuesday') + getSleepHours('Wednesday') + getSleepHours('Thursday') + getSleepHours('Friday') + getSleepHours('Saturday');
+const getActualSleepHours = () => {
+  let actualSleepHours = 0;
+  days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  for (day in days) {
+    actualSleepHours += getSleepHours(days[day]);
+  }
+  return actualSleepHours;
+};
 
 const getIdealSleepHours = (idealHours) => {
   return idealHours*7;
@@ -34,7 +41,9 @@ const getIdealSleepHours = (idealHours) => {
 
 const sleepDebt = () => {
   let realSleep = getActualSleepHours();
+  console.log(`Your real sleep hours were ${realSleep}.`);
 	let idealSleep = getIdealSleepHours(8);
+  console.log(`You should have slept ${idealSleep} hours this week.`);
   if (realSleep > idealSleep) {
     console.log("You got more sleep than needed.");
     console.log("You are " + realSleep - idealSleep + " hours over target");
