@@ -21,3 +21,17 @@ function compareGuesses(human, confuser, secret) {
         humanWins = false;
     }
     return humanWins;
+}
+
+const updateScore = (winner) => {
+    if (winner = 'human') {
+        humanScore++;
+    } else {
+        computerScore++;
+    }
+}
+
+const advanceRound = () => {
+    currentRoundNumber ++;
+    return;
+}
