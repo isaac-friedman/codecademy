@@ -1,5 +1,3 @@
-// The scope of `random` is too loose
-
 const name = 'Nala';
 
 const getRandEvent = () => {
@@ -13,7 +11,6 @@ const getRandEvent = () => {
   }
 };
 
-// The scope of `days` is too tight
 const getTrainingDays = event => {
 	let days;
   if (event === 'Marathon') {
@@ -27,7 +24,6 @@ const getTrainingDays = event => {
   return days;
 };
 
-// The scope of `name` is too tight
 const logEvent = (name, event) => {
   console.log(`${name}'s event is: ${event}`);
 };
@@ -38,7 +34,6 @@ const logTime = (name, days) => {
 
 const event = getRandEvent();
 const days = getTrainingDays(event);
-// Define a `name` variable. Use it as an argument after updating logEvent and logTime
 
 
 logEvent(name, event);
