@@ -5,7 +5,7 @@ mutualFollowers = [];
 
 /***
 *This is the least efficient way to find mutual followers because it iterates
-* over both arrays twice.
+* over both arrays LongArray.lenght times making it O(n)^2
 ***/
 
 for (let i=0; i<bobsFollowers.length; i++) {
@@ -18,8 +18,8 @@ for (let i=0; i<bobsFollowers.length; i++) {
 
 
 /***
-*This way is more efficient in terms of time because array lookups are O(1)
-*time while iterating over an array is O(n).
+*This way is more efficient in terms of time because the limiting factor is one
+*iteration over the shorter array making it O(n).
 ***/
 
 //Reset mutualFollowers
