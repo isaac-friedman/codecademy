@@ -15,3 +15,19 @@ for (let i=0; i<bobsFollowers.length; i++) {
     }
   }
 }
+
+
+/***
+*This way is more efficient in terms of time because array lookups are O(1)
+*time while iterating over an array is O(n).
+***/
+
+//Reset mutualFollowers
+mutualFollowers = []
+//iterate over shorter array. In production code it would be trivial to check for the shorter array each time the function was called.
+tinasFollowers.forEach(function(follower) {
+    if (bobsFollowers.includes(follower)) {
+        mutualFollowers.push(follower);
+    }
+});
+console.log(mutualFollowers);
