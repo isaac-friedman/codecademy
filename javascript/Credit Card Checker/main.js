@@ -52,4 +52,11 @@ const validate = (card) => {
     }
 }
 
-batch.forEach(element => console.log(validate(element)));
+const findInvalid = (batch) => {
+    let invalidCards = [];
+    //Anti Patern alert: We want the INVALID cards so we keep the cards where validate returns FALSE
+    batch.forEach(function(card) {
+        if(!validate(card)) {invalidCards.push(card)};
+    });
+    return invalidCards;
+}
