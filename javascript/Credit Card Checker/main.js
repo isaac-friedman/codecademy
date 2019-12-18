@@ -35,7 +35,6 @@ const validateCC = (card) => {
     ***/
     let iterCount = 1;
     while(i >= 0) {
-        console.log(iterCount);
         if (iterCount % 2 == 0) { //even iteration
             2*card[i] >= 10 ? luhnyToons.push((2*card[i]-9)) : luhnyToons.push(2*card[i]);
         } else { //odd iteration
@@ -44,10 +43,8 @@ const validateCC = (card) => {
         i --;
         iterCount ++;
     }
-    console.log(luhnyToons);
     let checksum = 0;
     luhnyToons.forEach(digit => checksum += digit);
-    console.log(checksum);
     if (checksum % 10 === 0) {
         return true;
     } else {
@@ -56,5 +53,3 @@ const validateCC = (card) => {
 }
 
 batch.forEach(element => console.log(validateCC(element)));
-//console.log(validateCC(valid2));
-//console.log(validateCC(invalid3));
