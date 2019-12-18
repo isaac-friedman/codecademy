@@ -24,7 +24,7 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 
 
-const validateCC = (card) => {
+const validate = (card) => {
     let luhnyToons = [];
     let i = card.length-1;
     let manipulate = 0;
@@ -52,4 +52,4 @@ const validateCC = (card) => {
     }
 }
 
-batch.forEach(element => console.log(validateCC(element)));
+batch.forEach(element => console.log(validate(element)));
