@@ -60,3 +60,26 @@ const findInvalid = (batch) => {
     });
     return invalidCards;
 }
+
+const issuedInvalid = (batch) => {
+    let issuers = new Set();
+    batch.forEach(function(card) {
+        switch (card[0]) {
+            case 3:
+                issuers.add('Amex');
+                break;
+            case 4:
+                issuers.add('Visa');
+                break;
+            case 5:
+                issuers.add('Mastercard');
+                break;
+            case 6:
+                issuers.add('Discover');
+                break;
+            default:
+                continue;
+        }
+    });
+    return issuers;
+}
