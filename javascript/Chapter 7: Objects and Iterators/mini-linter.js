@@ -10,3 +10,13 @@ let unnecessaryWords = ['extremely', 'literally', 'actually' ];
 let betterWords = storyWords.filter(word => !(unnecessaryWords.includes(word)));
 
 console.log(betterWords.length);
+
+countOverused = 0;
+
+/*Linear time*/
+story.forEach(function(word) {
+    if (overusedWords.includes(word)) {
+        countOverused ++;
+    }
+});
+console.log(countOverused);
