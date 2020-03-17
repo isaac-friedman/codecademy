@@ -78,8 +78,8 @@ const issuedInvalid = (batch) => {
                 issuers.add('Discover');
                 break;
             default:
-                continue;
+                cons
+
         }
-    });
-    return issuers;
+    })
 }
