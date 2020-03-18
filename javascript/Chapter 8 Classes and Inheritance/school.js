@@ -26,6 +26,14 @@ class School {
         this._studentCount;
     }
 
+    quickFacts() {
+
+    }
+
+    static pickSub() {
+
+    }
+
 }
 
 class Primary extends School {
