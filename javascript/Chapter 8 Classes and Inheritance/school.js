@@ -37,13 +37,38 @@ class School {
 }
 
 class Primary extends School {
+    constructor(name, level) {
+        super(name, level) {
+            this._pickupPolicy = "Standard as recommended by city DOHHS";
+        }
+        get pickupPolicy() {
+            return this._pickupPolicy;
+        }
+
+        set pickupPolicy() {
+            this._pickupPolicy;
+        }
+    }
 
 }
 
 class Middle extends School {
-
+    constructor(name, level) {
+        super(name, level);
+    }
 }
 
 class High extends School {
+    constructor(name, level) {
+        super(name, level) {
+            this._sportsTeams = "Standard as recommended by city DOHHS";
+        }
+        get pickupPolicy() {
+            return this._sportsTeams;
+        }
 
+        set pickupPolicy() {
+            this._sportsTeams;
+        }
+    }
 }
